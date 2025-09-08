@@ -17,6 +17,7 @@ def manim_code(text):
             - Use MathTex for formulas
             - add .wait(2) after each animation
             - only python code , no explanations 
+            - write only one scene and name it as generated_scene
             TEXT:{text}"""
     resp_manim= model.invoke(prompt)
     return resp_manim
@@ -37,5 +38,7 @@ def text_to_voice(text_recv,filename="output.mp3"):
             f.write(chunk)
     
 def video_generator(code):
-    return 0
+    with open("generated_video.py","w")as f:
+        f.write(code)
+    os.system("manim -pql generated_video.py generated_scene")
 
