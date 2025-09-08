@@ -39,20 +39,3 @@ def text_to_voice(text_recv,filename="output.mp3"):
 def video_generator(code):
     return 0
 
-# if __name__ == "__main__":
-#     query = "Curve filling"
-#     query_content = generate_text(query)
-#     text = query_content.content
-#     example_part = text.split("Example:")[-1].strip()
-#     print(text)
-#     print("EXAMPLE:\n", example_part, "\n")
-#     manim_code(example_part)
-
-
-# query= input("enter topic")
-# prompt=f"you are an math expert . Explain {query} in professionally and add a example section at last"
-# cont=generate_text(prompt)
-# example_part = cont.content.split("Example:")[-1].strip()
-# print(cont.content)
-# print(manim_code(example_part))
-# text_to_voice(example_part)
